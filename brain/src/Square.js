@@ -2,7 +2,7 @@ import React from "react"
 //import { useState } from "react" //Ensure to import anything you need
 
 
-const Square = ({value, onSquareClick}) => {
+const Square = ({value, onSquareClick}) => { 
    
     
    // const [value, setvalue] = useState(null) // this is the usage of useState
