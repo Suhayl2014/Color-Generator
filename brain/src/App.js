@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.css';
 import Square from './Square.js'
-import { useState } from 'react';
+//import { useState } from 'react';
 
 
-function App() {
-  const [xIsNext, setxIsNext] = useState(true)
-  const [squares, setSquares] = useState(Array(9).fill(null)) //Creates an Array of 9 with them filled to null
+function App({xIsNext, squares, onPlay }) {
+  //const [xIsNext, setxIsNext] = useState(true)
+  //const [squares, setSquares] = useState(Array(9).fill(null)) //Creates an Array of 9 with them filled to null
   const handleClick = (i) => {
     const nextSquares = squares.slice();
     if (squares[i] === 'X' || (squares[i] === 'O' || calculateWinner(squares) )) { //This checks to see if it either X or O using the OR operator
@@ -18,8 +18,10 @@ function App() {
     } else {
     nextSquares[i] = "O"; 
   }
-    setSquares(nextSquares); // setsquare is a function that causes the whole board to rerender showing the latest update of the board
-    setxIsNext(!xIsNext); // ensures whatever xIsnext is at, it flips it and setXISNEXT IS Assigned to it
+
+  onPlay(nextSquares);
+     // setsquare is a function that causes the whole board to rerender showing the latest update of the board
+     // ensures whatever xIsnext is at, it flips it and setXISNEXT IS Assigned to it
 }
 
 const winner = calculateWinner(squares);
