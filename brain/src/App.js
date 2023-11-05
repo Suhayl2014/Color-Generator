@@ -11,6 +11,7 @@ function App({xIsNext, squares, onPlay }) {
     const nextSquares = squares.slice();
     if (squares[i] === 'X' || (squares[i] === 'O' || calculateWinner(squares) )) { //This checks to see if it either X or O using the OR operator
       //Another way would be if (squares[i]) {Return} This is because we set the array to null so if theres an x or o it has a value and so the conditional check will evaluate to true and return early.
+      //We are also running the calculateWinner function. If its true we return early.
     return
     }
     if (xIsNext) { //Evalueates if Xisnext is true if it is, then x else O
