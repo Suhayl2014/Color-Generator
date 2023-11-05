@@ -12,6 +12,20 @@ const Block = () => {
 
   return (
     <React.StrictMode>
+      {/* let componentToRender;
+
+        if (showgame) {
+          componentToRender = <Game />;
+        } else {
+          componentToRender = <Welcome toggleGame={toggleGame} />;
+        }
+
+        return (
+          <React.StrictMode>
+            {componentToRender}
+          </React.StrictMode>
+        );
+ */}
       {showgame ? <Welcome toggleGame={toggleGame} /> : <Game />}
     </React.StrictMode>
   );

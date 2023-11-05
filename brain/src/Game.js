@@ -34,7 +34,7 @@ const Game = () => {
 
     return ( // For each move in the tic-tac-toe game’s history, you create a list item <li> which contains a button <button>. The button has an onClick handler which calls a function called jumpTo (that you haven’t implemented yet).
         <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button className="btn btn-primary" onClick={() => jumpTo(move)}>{description}</button>
         </li>
     )
  })

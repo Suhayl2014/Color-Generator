@@ -1,7 +1,9 @@
+
+
 const Welcome = ({toggleGame}) => {
     return (
         <div>
-            <button onClick={toggleGame} className="PlayTheGame">
+            <button className="btn btn-primary" onClick={toggleGame}>
                 Click to Play
             </button>
         </div>
